@@ -1,26 +1,24 @@
-import axios from "axios";
-
-const INVENTORY_API_BASE_URL = "http://localhost:9080/inventory";
+import axios from 'axios';
 
 class InventoryService {
   getInventories() {
-    return axios.get(INVENTORY_API_BASE_URL);
+    return axios.get('/inventory');
   }
 
   createInventory(inventory) {
-    return axios.post(INVENTORY_API_BASE_URL, inventory);
+    return axios.post('/inventory', inventory);
   }
 
   getInventoryById(inventoryId) {
-    return axios.get(INVENTORY_API_BASE_URL + "/" + inventoryId);
+    return axios.get(`/inventory/${inventoryId}`);
   }
 
   updateInventory(inventory, inventoryId) {
-    return axios.put(INVENTORY_API_BASE_URL + "/" + inventoryId, inventory);
+    return axios.put(`/inventory/${inventoryId}`, inventory);
   }
 
   deleteInventory(inventoryId) {
-    return axios.delete(INVENTORY_API_BASE_URL + "/" + inventoryId);
+    return axios.delete(`/inventory/${inventoryId}`);
   }
 }
 

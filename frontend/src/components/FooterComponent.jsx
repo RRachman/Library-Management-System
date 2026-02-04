@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import IPLLogoVertical from "../IPL Logo Vertical.svg";
+import IPLLogoVertical from "../IPL Logo Vertical.png";
 
 class FooterComponent extends Component {
   constructor(props) {
@@ -36,11 +36,11 @@ class FooterComponent extends Component {
               <p className="font-bold mb-2">Mari membaca di Isola Publib!</p>
               <p className="">
                 {" "}
-                Isola Publib, Kec. Sukasari, Kota Bandung, Jawa Barat
+                Library Management System
               </p>
             </div>
             <div className="mt-4 mt-md-0">
-              <p>&copy; 2024. Made by Raihan for Promnet.</p>
+              <p>&copy; 2026. Made by love for gantengDev.</p>
             </div>
           </div>
         </section>

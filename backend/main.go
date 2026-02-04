@@ -176,11 +176,19 @@ var err error
 
 func InitDB() {
 	db, err = sql.Open("mysql",
-		"root:@tcp(127.0.0.1:3306)/db_2204055_mraihannaufalfawwaz_uas_pilkomb")
+		"root:@tcp(127.0.0.1:3306)/db_2204055_mraihannaufalfawwaz_uas_pilkomb?parseTime=true")
 	if err != nil {
-		panic(err.Error())
+		log.Fatal(err)
 	}
+
+	err = db.Ping()
+	if err != nil {
+		log.Fatal("Database tidak bisa diakses:", err)
+	}
+
+	log.Println("✅ Database connected")
 }
+
 
 /***************************************************/
 
